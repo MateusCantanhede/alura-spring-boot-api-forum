@@ -1,19 +1,19 @@
 package com.example.demo.config.validation;
 
 public class ErrorFormDto {
-	private String campo;
-	private String erro;
+	private String field;
+	private String error;
 	
 	
-	public ErrorFormDto(String campo, String erro) {
-		this.campo = campo;
-		this.erro = erro;
+	public ErrorFormDto(String field, String error) {
+		this.field = field;
+		this.error = error;
 	}
-	public String getCampo() {
-		return campo;
+	public String getField() {
+		return field;
 	}
-	public String getErro() {
-		return erro;
+	public String getError() {
+		return error;
 	}
 	
 	
