@@ -22,7 +22,7 @@ public class TopicDtoDetails {
 		this.title = topic.getTitle();
 		this.message = topic.getMessage();
 		this.dateCriation = topic.getDateCriation();
-		this.authorName = topic.getAutor().getName();
+		this.authorName = topic.getAuthor().getName();
 		this.status = topic.getStatus();
 		this.reply = new ArrayList<>();
 		this.reply.addAll(topic.getReply().stream().map(ReplyDto:: new).collect(Collectors.toList()));

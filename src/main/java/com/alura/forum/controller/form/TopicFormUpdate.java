@@ -32,10 +32,10 @@ public class TopicFormUpdate {
 	}
 
 	public Topic update(Long id, TopicRepository topicRepository) {
-		Topic topico = topicRepository.getOne(id);
-		topico.setTitle(this.title);
-		topico.setMessage(this.message);
-		return topico;
+		Topic topic = topicRepository.getOne(id);
+		topic.setTitle(this.title);
+		topic.setMessage(this.message);
+		return topic;
 		
 	}
 	

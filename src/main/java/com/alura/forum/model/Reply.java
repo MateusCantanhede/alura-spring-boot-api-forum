@@ -18,7 +18,7 @@ public class Reply {
 	private Topic topic;
 	private LocalDateTime dateCriation;
 	@ManyToOne
-	private User autor;
+	private User author;
 	private Boolean solution = false;
 
 	@Override
@@ -78,12 +78,12 @@ public class Reply {
 		this.dateCriation = dateCriation;
 	}
 
-	public User getAutor() {
-		return autor;
+	public User getAuthor() {
+		return author;
 	}
 
-	public void setAutor(User autor) {
-		this.autor = autor;
+	public void setAuthor(User author) {
+		this.author = author;
 	}
 
 	public Boolean getSolution() {

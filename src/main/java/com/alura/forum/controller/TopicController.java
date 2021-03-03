@@ -34,7 +34,7 @@ import com.alura.forum.repository.CourseRepository;
 import com.alura.forum.repository.TopicRepository;
 
 @RestController
-@RequestMapping("/topicos")
+@RequestMapping("/topics")
 public class TopicController {
 	
 	@Autowired
@@ -64,7 +64,7 @@ public class TopicController {
 		Topic topic = form.converter(courseRepository);
 		topicRepository.save(topic);
 		
-		URI uri = uriBuilder.path("/topicos/{id}").buildAndExpand(topic.getId()).toUri();
+		URI uri = uriBuilder.path("/topics/{id}").buildAndExpand(topic.getId()).toUri();
 		return ResponseEntity.created(uri).body(new TopicDto(topic));
 	}
 	@GetMapping("/{id}")

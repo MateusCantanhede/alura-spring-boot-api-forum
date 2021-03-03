@@ -27,9 +27,9 @@ public class ErrorValidationHandler {
 		List<ErrorFormDto> dto = new ArrayList<>();
 		List<FieldError> fieldErrors = exception.getBindingResult().getFieldErrors();
 		fieldErrors.forEach(e ->{
-			String mensagem = messageSource.getMessage(e, LocaleContextHolder.getLocale());
-			ErrorFormDto erro = new ErrorFormDto(e.getField(), mensagem);
-			dto.add(erro);
+			String message = messageSource.getMessage(e, LocaleContextHolder.getLocale());
+			ErrorFormDto error = new ErrorFormDto(e.getField(), message);
+			dto.add(error);
 		});
 		
 		return dto;

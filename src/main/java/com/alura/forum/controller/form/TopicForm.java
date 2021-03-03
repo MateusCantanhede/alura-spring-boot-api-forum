@@ -39,8 +39,8 @@ public class TopicForm {
 		this.courseName = courseName;
 	}
 	public Topic converter(CourseRepository curseRepository) {
-		Course curso = curseRepository.findByName(courseName);
-		return new Topic(title,message,curso);
+		Course course = curseRepository.findByName(courseName);
+		return new Topic(title,message,course);
 	}
 	
 	

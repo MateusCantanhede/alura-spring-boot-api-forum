@@ -8,13 +8,13 @@ public class ReplyDto {
 	private Long id;
 	private String message;
 	private LocalDateTime dateCriation;
-	private String autorName;
+	private String authorName;
 	
 	public ReplyDto(Reply reply) {
 		this.id = reply.getId();
 		this.message = reply.getMessage();
 		this.dateCriation = reply.getDateCriation();
-		this.autorName = reply.getAutor().getName();
+		this.authorName = reply.getAuthor().getName();
 	}
 
 	public Long getId() {
@@ -29,8 +29,8 @@ public class ReplyDto {
 		return dateCriation;
 	}
 
-	public String getAutorName() {
-		return autorName;
+	public String getAuthorName() {
+		return authorName;
 	}
 	
 	

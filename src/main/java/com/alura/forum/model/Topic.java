@@ -23,10 +23,10 @@ public class Topic {
 	private LocalDateTime dateCriation = LocalDateTime.now();
 	
 	@Enumerated(EnumType.STRING)
-	private TopicStatus status = TopicStatus.NAO_RESPONDIDO;
+	private TopicStatus status = TopicStatus.NOT_ANSWERED;
 	
 	@ManyToOne
-	private User autor;
+	private User author;
 	@ManyToOne
 	private Course course;
 	@OneToMany(mappedBy = "topic")
@@ -108,12 +108,12 @@ public class Topic {
 		this.status = status;
 	}
 
-	public User getAutor() {
-		return autor;
+	public User getAuthor() {
+		return author;
 	}
 
-	public void setAutor(User autor) {
-		this.autor = autor;
+	public void setAuthor(User author) {
+		this.author = author;
 	}
 
 	public Course getCourse() {
